@@ -1,0 +1,16 @@
+<html>
+  <title>Anmortization</title>
+  <head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css"/>
+  </head>
+  <body>
+    <form action="/amortize/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      {% if loan %}
+        {% include "amortize/am_table.html" %}
+      {% endif %}
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

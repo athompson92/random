@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Payment #</th>
+    <th>Period Begining Balence</th>
+    <th>Principle</th>
+    <th>Interest</th>
+    <th>Period Ending Balence</th>
+  </tr>
+  {% for payment in loan.payments %}
+  <tr>
+    <td>{{ payment.pmt_num }}</td>
+    <td>${{ payment.beginning_balence|floatformat:2 }}</td>
+    <td>${{ payment.principle|floatformat:2 }}</td>
+    <td>${{ payment.interest|floatformat:2 }}</td>
+    <td>${{ payment.ending_balence|floatformat:2 }}</td>
+  </tr>
+  {% endfor %}
+</table>
+

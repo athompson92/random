@@ -1,0 +1,1 @@
+{'loan_amount': Decimal('200000'), 'down_payment': Decimal('40000'), 'annual_interest_rate': Decimal('0.04'), 'term': 30}
